@@ -48,7 +48,7 @@ const Post: React.FC = () => {
       <header>
         <h1>{post.metadata.title}</h1>
         {post.metadata.date && (
-          <time dateTime={post.metadata.date}>
+          <time dateTime={post.metadata.date} className="post-date">
             {new Date(post.metadata.date).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',

@@ -28,7 +28,7 @@
   top: 1rem;
   right: 1rem;
   background: none;
-  border: 1px solid var(--text-secondary);
+  border: 1px dashed var(--text-secondary);
   color: var(--text-primary);
   width: 50px;
   height: 50px;
@@ -37,7 +37,7 @@
   justify-content: center;
   cursor: pointer;
   font-family: var(--font-main);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   z-index: 1000;
   transition: background-color 0.3s ease;
   padding: 0;
@@ -167,18 +167,11 @@ html, body {
 /* Post List */
 .post-list {
   width: 100%;
+  margin-top: 3rem;
   max-width: var(--max-content-width);
   margin: 0 auto;
 }
 
-.post-list h1 {
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--text-primary);
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 0.5rem;
-}
 
 .post-preview {
   margin-bottom: 2rem;
@@ -197,14 +190,23 @@ html, body {
 }
 
 .post-preview h2 a:hover {
-  color: #2e4f4f;  /* Deep, desaturated green-teal */
+  color: #3d6650;  /* Deep, desaturated green-teal */
 }
 
 .post-preview time {
   display: block;
   color: var(--text-secondary);
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-main);
+}
+
+.post-date {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-main);
 }
 
 .excerpt {
@@ -214,17 +216,17 @@ html, body {
 
 .read-more {
   display: inline-block;
-  color: var(--text-primary);
+  color: var(--text-secondary);
   text-decoration: none;
-  font-weight: bold;
-  border: 1px solid var(--text-secondary);
-  padding: 0.2rem 0.5rem;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
+  border: 1.5px dotted var(--text-secondary);
+  padding: 0.2rem 0.7rem;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 .read-more:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(128, 128, 128, 0.1);
+  border-color: var(--text-secondary);
 }
 
 /* Markdown Content Styling - Minimalist B&W */
@@ -418,14 +420,25 @@ html, body {
 }
 
 .post-list-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 2rem;
+  text-transform: none;
 }
 
 .post-list-header h1 {
-  margin-bottom: 0;
+  /* margin: 1rem 0 1rem; */
+  font-weight: bold;
+  color: var(--text-primary);
+  font-size: 3.2rem;
+  /* line-height: 1.2; */
+}
+
+.header-underline {
+  color: var(--text-main);
+  font-family: var(--font-main);
+  /* font-size: 1rem; */
+  /* letter-spacing: 1rem; */
+  margin-bottom: 2rem;
+  opacity: 0.9;
 }
 
 .new-post-button, .action-button {

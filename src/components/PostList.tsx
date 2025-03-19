@@ -9,7 +9,6 @@ const PostList: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [showNewPostHelp, setShowNewPostHelp] = useState(false);
 
   const refreshPosts = async () => {
     try {
@@ -35,11 +34,6 @@ const PostList: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
-
-  // Function to show help for creating a new post
-  const handleNewPostClick = () => {
-    setShowNewPostHelp(true);
   };
 
   useEffect(() => {
@@ -74,9 +68,6 @@ const PostList: React.FC = () => {
           <button onClick={refreshPosts} className="action-button">
             Retry Loading Posts
           </button>
-          <button onClick={handleNewPostClick} className="action-button">
-            Create New Post
-          </button>
         </div>
       </div>
     );
@@ -85,37 +76,9 @@ const PostList: React.FC = () => {
   return (
     <div className="post-list">
       <div className="post-list-header">
-        <h1>Posts</h1>
-        <button onClick={handleNewPostClick} className="new-post-button">
-          + New Post
-        </button>
+        <h1>Home</h1>
+        <div className="header-underline">vvvvvvvvv</div>
       </div>
-      
-      {showNewPostHelp && (
-        <div className="new-post-help">
-          <h3>Creating a New Post</h3>
-          <p>To create a new post, add a markdown file to <code>public/content/posts/</code> with this format:</p>
-          <pre>
-{`---
-title: Your Post Title
-date: ${new Date().toISOString().slice(0, 10)}
-slug: your-post-slug
-excerpt: A brief description of your post
----
-
-Your content here in markdown format.
-
-## Subheading
-
-Paragraphs, lists, and other markdown content...`}
-          </pre>
-          <p>Save the file with a .md extension (e.g., <code>your-post-slug.md</code>) and refresh this page.</p>
-          <p><strong>Note:</strong> Make sure your development server has access to the <code>public</code> directory.</p>
-          <button onClick={() => setShowNewPostHelp(false)} className="action-button">
-            Close
-          </button>
-        </div>
-      )}
       
       {posts.length === 0 ? (
         <div className="empty">
@@ -131,12 +94,6 @@ Paragraphs, lists, and other markdown content...`}
               <li>During development, Vite may need to be restarted to detect new files</li>
             </ul>
           </details>
-          <button onClick={handleNewPostClick} className="action-button">
-            Show New Post Template
-          </button>
-          <button onClick={refreshPosts} className="action-button">
-            Refresh
-          </button>
         </div>
       ) : (
         <div className="post-list-content">
@@ -162,7 +119,7 @@ Paragraphs, lists, and other markdown content...`}
                 </Suspense>
               )}
               <Link to={`/posts/${post.metadata.slug}`} className="read-more">
-                Read more
+                Read More
               </Link>
             </article>
           ))}
