@@ -1,0 +1,313 @@
+:root {
+  /* Dark Mode */
+  --bg-primary-dark: #000000;
+  --text-primary-dark: #ffffff;
+  --text-secondary-dark: #808080;
+  --border-color-dark: #333333;
+
+  /* Light Mode */
+  --bg-primary-light: #ffffff;
+  --text-primary-light: #000000;
+  --text-secondary-light: #666666;
+  --border-color-light: #e0e0e0;
+  
+  /* Shared Variables */
+  --font-main: 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --max-content-width: 800px;
+
+  /* Default to Dark Mode */
+  --bg-primary: var(--bg-primary-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --border-color: var(--border-color-dark);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: 1px solid var(--text-secondary);
+  color: var(--text-primary);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 1.5rem;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  padding: 0;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Light Mode */
+.light-mode {
+  --bg-primary: var(--bg-primary-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --border-color: var(--border-color-light);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-secondary) var(--bg-primary);
+}
+
+/* B&W scrollbar */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--text-secondary);
+  border-radius: 4px;
+}
+
+html, body {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+/* Full-width container with centered content */
+.container {
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header & Navigation - Minimalist B&W style */
+.app-header {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  width: 100vw;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.app-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-family: var(--font-main);
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-left: 1rem;
+}
+
+.main-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-family: var(--font-main);
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--text-primary);
+}
+
+/* Main Content */
+.app-content {
+  width: 100vw;
+  min-height: calc(100vh - 160px);
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.app-content .container {
+  width: 100%;
+  max-width: var(--max-content-width);
+}
+
+/* Footer - Minimalist status bar style */
+.app-footer {
+  width: 100vw;
+  background-color: var(--bg-primary);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+/* Post List */
+.post-list {
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+}
+
+.post-list h1 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.post-preview {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-preview h2 {
+  margin-bottom: 0.5rem;
+}
+
+.post-preview h2 a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.post-preview h2 a:hover {
+  color: var(--text-secondary);
+}
+
+.post-preview time {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.excerpt {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.read-more {
+  display: inline-block;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid var(--text-secondary);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Markdown Content Styling - Minimalist B&W */
+.markdown-content {
+  line-height: 1.8;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  margin: 1.5rem 0 1rem;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.markdown-content p {
+  margin-bottom: 1.5rem;
+}
+
+.markdown-content a {
+  color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--text-secondary);
+}
+
+.markdown-content pre {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow: auto;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.markdown-content code {
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    --max-content-width: 100%;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .app-header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav ul {
+    margin-top: 1rem;
+  }
+}
+
+/* Loading Spinner - Minimalist B&W */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.spinner {
+  width: 10px;
+  height: 10px;
+  background-color: var(--text-secondary);
+  animation: blink 1s infinite;
+  margin: 20px auto;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-family: var(--font-main);
+} 
