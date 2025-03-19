@@ -61,6 +61,36 @@ npm run dev
 npm run build
 ```
 
+## Docker Deployment
+
+### Prerequisites
+- Docker
+- Docker Compose
+
+### Building and Running
+
+1. Clone the repository
+```bash
+git clone https://github.com/katchinsky/katya-in.git
+cd katya-in
+```
+
+2. Build and run the container
+```bash
+docker-compose up --build
+```
+
+The application will be available at `http://localhost:3000`
+
+### Development with Docker
+- To rebuild the image: `docker-compose build`
+- To start the container: `docker-compose up`
+- To stop the container: `docker-compose down`
+
+### Adding Content
+- Place markdown files in the `public/content/posts/` directory
+- The content will be automatically served by the container
+
 ## Technologies Used
 
 - React.js
