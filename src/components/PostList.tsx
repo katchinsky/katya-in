@@ -85,7 +85,7 @@ const PostList: React.FC = () => {
   return (
     <div className="post-list">
       <div className="post-list-header">
-        <h1>Blog Posts</h1>
+        <h1>Posts</h1>
         <button onClick={handleNewPostClick} className="new-post-button">
           + New Post
         </button>

@@ -44,7 +44,8 @@
 }
 
 .theme-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(46, 79, 79, 0.1);  /* Lighter version of the desaturated green */
+  border-color: #2e4f4f;  /* Deep, desaturated green-teal */
 }
 
 /* Light Mode */
@@ -196,7 +197,7 @@ html, body {
 }
 
 .post-preview h2 a:hover {
-  color: var(--text-secondary);
+  color: #2e4f4f;  /* Deep, desaturated green-teal */
 }
 
 .post-preview time {
@@ -252,6 +253,11 @@ html, body {
   border-bottom: 1px dotted var(--text-secondary);
 }
 
+.markdown-content a:hover {
+  color: #2e4f4f;  /* Deep, desaturated green-teal */
+  border-bottom-color: #2e4f4f;
+}
+
 .markdown-content pre {
   background-color: var(--border-color);
   color: var(--text-primary);
@@ -265,6 +271,24 @@ html, body {
 .markdown-content code {
   font-family: var(--font-main);
   font-size: 0.9rem;
+}
+
+.markdown-content ul {
+  padding-left: 3.5rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  list-style-type: disc;
+}
+
+.markdown-content ul ul {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.markdown-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  list-style-type: decimal;
 }
 
 /* Responsive adjustments */

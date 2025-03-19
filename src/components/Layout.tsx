@@ -7,7 +7,7 @@ const Layout: React.FC = () => {
       <header className="app-header">
         <div className="container">
           <Link to="/" className="site-title">
-            Markdown Blog
+            Katya In
           </Link>
           <nav className="main-nav">
             <ul>
@@ -31,7 +31,7 @@ const Layout: React.FC = () => {
       </main>
       <footer className="app-footer">
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} Markdown Blog - Built with React and Vite</p>
+          <p>&copy; {new Date().getFullYear()} Katya In - Built with React and Vite</p>
         </div>
       </footer>
     </div>
