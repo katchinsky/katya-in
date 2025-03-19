@@ -17,6 +17,9 @@ const Layout: React.FC = () => {
               <li>
                 <Link to="/pages/about">About</Link>
               </li>
+              <li>
+                <Link to="/pages/now">Now</Link>
+              </li>
             </ul>
           </nav>
         </div>

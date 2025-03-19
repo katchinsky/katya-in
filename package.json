@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "./update-posts.sh && vite",
+    "build": "./update-posts.sh && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "./update-posts.sh && vite preview"
   },
   "dependencies": {
     "buffer": "^6.0.3",

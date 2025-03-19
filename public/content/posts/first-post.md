@@ -2,9 +2,12 @@
 title: My First Blog Post
 date: 1609-06-01
 slug: first-post
-excerpt: This is my first blog post using the Obsidian-like blog system.
+excerpt: This is my first blog post!
 ---
-Hello world! This is my first blog post written in Markdown.
+
+# Hiiiiii
+
+Hello world! This is my first blog post written in Markdown. 
 
 ## Code Example
 

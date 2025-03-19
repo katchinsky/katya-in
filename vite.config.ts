@@ -4,11 +4,21 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  
+  // Ensure correct static file serving
+  publicDir: 'public',
+  
   server: {
-    watch: {
-      usePolling: true
+    fs: {
+      // Allow serving files from the public directory
+      allow: ['public', 'src']
+    },
+    // Enable detailed logging
+    hmr: {
+      overlay: true
     }
   },
+  
   build: {
     // Enable code splitting and dynamic imports
     rollupOptions: {
@@ -24,13 +34,17 @@ export default defineConfig({
     minify: 'terser',
     terserOptions: {
       compress: {
-        drop_console: true,
+        drop_console: false,  // Keep console logs for debugging
         drop_debugger: true
       }
     },
     // Faster build
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 1000,
+    
+    // Detailed source maps for better debugging
+    sourcemap: true
   },
+  
   // Improve performance
   optimizeDeps: {
     include: [
@@ -40,5 +54,11 @@ export default defineConfig({
       'gray-matter', 
       'react-markdown'
     ]
-  }
+  },
+
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
 })
