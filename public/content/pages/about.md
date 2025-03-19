@@ -15,9 +15,9 @@ I'm Katya, and this is my personal space for documenting:
 ## My Interests
 
 Anthropology, digital humanities, maps and urban planning, history of architecture, cinema, female solo travel, art, sketching.
-I am doing some programming for money as well. 
+I do some programming for money as well. 
 
 ## Contact
 
-You can mail me at mail@katya.in
-There is a chance that I will answer.
+You can mail me at mail@katya.in. 
+There is a 63% chance that I will answer.

@@ -2,26 +2,36 @@
 title: My First Blog Post
 date: 1609-06-01
 slug: first-post
-excerpt: This is my first blog post!
+excerpt: This is my first blog post! Just playing with stuff. 
 ---
 
-# Hiiiiii
+Hi!!!
+Just testing the shit out. 
 
-Hello world! This is my first blog post written in Markdown. 
+## Church
+Here was some code example, but now here's the church.
 
-## Code Example
 
-```javascript
-const greeting = "Hello, world!";
-console.log(greeting);
+```bash
+        _|_
+         | 
+         |
+        / \
+       //_\\
+      //(_)\\
+       |/^\|
+       ||_||
+       // \\
+      //   \\
+     // === \\
+    // =-=-= \\
+   //   ===   \\
+  //|         |\\
+    |         |
+    |  __ __  |
+    | |  |  | |
+    | | -|- | |
+    |_|__|__|_|
+  /`  =======  `\
+/`    =======    `\
 ```
-
-## Lists
-
-- Item 1
-- Item 2
-- Item 3
-
-## Links
-
-[Visit my website](https://example.com) 
