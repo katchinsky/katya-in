@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Set the directory paths
-POSTS_DIR="/Users/kate-chuprun/projects/obsidian-blog/public/content/posts"
-OUTPUT_FILE="/Users/kate-chuprun/projects/obsidian-blog/public/content/posts/posts.txt"
+POSTS_DIR="public/content/posts"
+OUTPUT_FILE="public/content/posts/posts.txt"
 
 # Ensure the output directory exists
 mkdir -p "$(dirname "$OUTPUT_FILE")"
@@ -17,4 +17,4 @@ fi
 find "$POSTS_DIR" -maxdepth 1 -type f -name "*.md" -exec basename {} \; | sort > "$OUTPUT_FILE"
 
 echo "Updated posts list at $OUTPUT_FILE:"
-cat "$OUTPUT_FILE" 
+cat "$OUTPUT_FILE"
