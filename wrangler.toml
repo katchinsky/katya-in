@@ -1,0 +1,7 @@
+[build]
+dir = "dist"
+command = "npm run build"
+
+[pages]
+framework = "vite"
+buildOutput = "dist" 
