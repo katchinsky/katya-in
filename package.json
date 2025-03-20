@@ -8,7 +8,7 @@
     "build": "./update-posts.sh && vite build",
     "lint": "eslint .",
     "preview": "./update-posts.sh && vite preview",
-    "pages:deploy": "npx wrangler pages deploy dist --project-name=katya-in"
+    "pages:deploy": "npx wrangler pages publish dist --project-name=katya-in"
   },
   "dependencies": {
     "buffer": "^6.0.3",

@@ -45,10 +45,10 @@ const discoverPostsDirectory = async (): Promise<string | null> => {
   
   // Definitive list of possible locations for posts
   const possiblePaths = [
-    '/public/content/posts',  // Prioritize this path
-    'public/content/posts',
-    '/content/posts',
-    'content/posts'
+    '/content/posts',    // This should be first in production
+    'content/posts',
+    '/public/content/posts',  // For development
+    'public/content/posts'
   ];
   
   // Try each path to see if we can find any markdown files
@@ -106,14 +106,30 @@ const listMarkdownFiles = async (): Promise<string[]> => {
 // Function to list all markdown files in the posts directory
 const listMarkdownFilesInDirectory = async (): Promise<string[]> => {
   try {
-    // Attempt to read the posts list from the text file
-    const response = await fetch('/content/posts/posts.txt', {
+    // Determine if we're in production by checking the URL
+    const isProduction = !window.location.hostname.includes('localhost') && 
+                         !window.location.hostname.includes('127.0.0.1');
+    
+    // Construct the correct path for the posts list file
+    const postsListPath = isProduction 
+      ? '/content/posts/posts.txt' 
+      : '/public/content/posts/posts.txt';
+    
+    // First try the production path
+    let response = await fetch('/content/posts/posts.txt', {
       cache: 'no-store'
     });
     
+    // If that fails and we're in development, try the development path
+    if (!response.ok && !isProduction) {
+      response = await fetch('/public/content/posts/posts.txt', {
+        cache: 'no-store'
+      });
+    }
+    
     if (!response.ok) {
       console.warn('[Markdown Loader] Could not fetch posts list, falling back to known posts');
-      return ['first-post.md', 'markdown-guide.md', 'second-post.md', 'new-post.md', 'sample.md', 'meowwww.md'];
+      return ['first-post.md', 'second-post.md'];
     }
     
     // Read the text file and split into lines, removing empty lines and trimming whitespace
@@ -124,10 +140,10 @@ const listMarkdownFilesInDirectory = async (): Promise<string[]> => {
     
     console.log('[Markdown Loader] Loaded posts from posts.txt:', posts);
     
-    return posts.length > 0 ? posts : ['first-post.md', 'markdown-guide.md', 'second-post.md', 'new-post.md', 'sample.md', 'meowwww.md'];
+    return posts.length > 0 ? posts : ['first-post.md', 'second-post.md'];
   } catch (error) {
     console.error('[Markdown Loader] Error reading posts list:', error);
-    return ['first-post.md', 'markdown-guide.md', 'second-post.md', 'new-post.md', 'sample.md', 'meowwww.md'];
+    return ['first-post.md', 'second-post.md'];
   }
 };
 
