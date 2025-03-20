@@ -1,5 +1,5 @@
 {
-  "name": "obsidian-blog",
+  "name": "katya-in",
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "outputDirectory": "dist",

@@ -1,5 +1,5 @@
 {
-  "name": "obsidian-blog",
+  "name": "katya-in",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,7 @@
     "build": "./update-posts.sh && vite build",
     "lint": "eslint .",
     "preview": "./update-posts.sh && vite preview",
-    "pages:deploy": "npx wrangler pages deploy dist --project-name=obsidian-blog"
+    "pages:deploy": "npx wrangler pages deploy dist --project-name=katya-in"
   },
   "dependencies": {
     "buffer": "^6.0.3",
