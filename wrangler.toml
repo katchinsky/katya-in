@@ -1,9 +1,2 @@
-[build]
-dir = "dist"
-command = "npm run build"
-outputDir = "dist"
-
-[pages]
-project-name = "obsidian-blog"
-directory = "dist"
-framework = "vite" 
+name = "obsidian-blog"
+pages_build_output_dir = "dist" 

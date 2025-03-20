@@ -8,8 +8,7 @@
     "build": "./update-posts.sh && vite build",
     "lint": "eslint .",
     "preview": "./update-posts.sh && vite preview",
-    "deploy": "npx wrangler pages deploy dist --project-name=obsidian-blog",
-    "pages:deploy": "npx wrangler pages deploy dist"
+    "pages:deploy": "npx wrangler pages deploy dist --project-name=obsidian-blog"
   },
   "dependencies": {
     "buffer": "^6.0.3",
