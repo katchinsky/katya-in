@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import { ThemeToggle } from './ThemeToggle';
 
 const Layout: React.FC = () => {
   return (
@@ -22,6 +23,9 @@ const Layout: React.FC = () => {
               </li>
             </ul>
           </nav>
+          <div className="theme-toggle-container">
+            <ThemeToggle />
+          </div>
         </div>
       </header>
       <main className="app-content">
