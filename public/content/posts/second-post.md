@@ -2,7 +2,7 @@
 title: I love my dog! 
 date: 2025-06-01
 slug: second-post
-excerpt:  
+excerpt: she barks and bites, but she is cute
 ---
 vvvvvvvvv
 
