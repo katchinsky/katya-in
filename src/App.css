@@ -48,6 +48,20 @@
   border-color: #2e4f4f;  /* Deep, desaturated green-teal */
 }
 
+
+.theme-toggle .moon,
+.theme-toggle .sun {
+  position: absolute;
+}
+
+.theme-toggle.dark .sun {
+  opacity: 0;
+}
+
+.theme-toggle.light .moon {
+  opacity: 0;
+}
+
 /* Light Mode */
 .light-mode {
   --bg-primary: var(--bg-primary-light);

@@ -4,13 +4,11 @@ import Layout from './components/Layout';
 import PostList from './components/PostList';
 import Post from './components/Post';
 import Page from './components/Page';
-import { ThemeToggle } from './components/ThemeToggle';
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <ThemeToggle />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<PostList />} />
