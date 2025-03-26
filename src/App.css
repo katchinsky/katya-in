@@ -43,12 +43,6 @@
   padding: 0;
 }
 
-.theme-toggle:hover {
-  background-color: rgba(46, 79, 79, 0.1);  /* Lighter version of the desaturated green */
-  border-color: #2e4f4f;  /* Deep, desaturated green-teal */
-}
-
-
 .theme-toggle .moon,
 .theme-toggle .sun {
   position: absolute;

@@ -94,11 +94,5 @@ button:focus-visible {
 }
 
 .theme-toggle:hover {
-  transform: scale(1.2);
-}
-
-.theme-toggle:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(46, 79, 79, 0.5);
-  border-radius: 50%;
+  transform: scale(0.8);
 }
