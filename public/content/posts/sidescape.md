@@ -1,7 +1,7 @@
 ---
 title: sidescape
 date: 2026-02-12
-slug: sidescape-demo
+slug: sidescape
 excerpt: my personal project, an invite-only social map for places and memories. there's the demo ->
 ---
 
