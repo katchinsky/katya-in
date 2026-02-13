@@ -11,7 +11,7 @@ export default defineConfig({
   server: {
     fs: {
       // Allow serving files from the public directory
-      allow: ['public', 'src']
+      allow: ['public', 'src', 'index.html']
     },
     // Enable detailed logging
     hmr: {
