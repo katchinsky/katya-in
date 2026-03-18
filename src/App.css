@@ -1,15 +1,15 @@
 :root {
   /* Dark Mode */
-  --bg-primary-dark: #000000;
+  --bg-primary-dark: #2e2e2e;
   --text-primary-dark: #ffffff;
   --text-secondary-dark: #808080;
   --border-color-dark: #333333;
 
   /* Light Mode */
-  --bg-primary-light: #ffffff;
+  --bg-primary-light: #eaeaea;
   --text-primary-light: #000000;
-  --text-secondary-light: #666666;
-  --border-color-light: #e0e0e0;
+  --text-secondary-light: #3f3f3f;
+  --border-color-light: #767676;
   
   /* Shared Variables */
   --font-main: 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;

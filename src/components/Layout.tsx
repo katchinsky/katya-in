@@ -35,7 +35,7 @@ const Layout: React.FC = () => {
       </main>
       <footer className="app-footer">
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} Katya In - Built with React and Vite</p>
+          <p>&copy; {new Date().getFullYear()} Katya In</p>
         </div>
       </footer>
     </div>
